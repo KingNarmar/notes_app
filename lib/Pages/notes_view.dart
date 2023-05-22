@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../widgets/custom_list_view.dart';
 
 import '../widgets/custom_search_icon.dart';
+import '../widgets/model_bottom_sheet.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -29,8 +30,15 @@ class NotesView extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton:
-          FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add)),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            showModalBottomSheet(
+                context: context,
+                builder: (context) {
+                  return const CustomBottomSheet();
+                });
+          },
+          child: const Icon(Icons.add)),
     );
   }
 }
