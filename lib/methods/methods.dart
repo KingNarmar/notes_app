@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:notesapp/constants.dart';
 
-OutlineInputBorder buildBorder() {
+
+OutlineInputBorder buildBorder([color]) {
     return OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
-                  borderSide: const BorderSide(color: KPrimaryColor)
+                  borderSide:  BorderSide(color: color)
                 );
   }
 
