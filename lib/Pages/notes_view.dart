@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/custom_search_icon.dart';
+
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
 
@@ -7,15 +9,14 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Notes"),
+        title: const Text("Notes"),
         elevation: 0,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.search_rounded),
-          )
+        backgroundColor: Colors.transparent,
+        actions:  const [
+          CustomSearchIcon()
         ],
       ),
     );
   }
 }
+
