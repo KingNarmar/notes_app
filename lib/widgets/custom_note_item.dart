@@ -24,7 +24,7 @@ class CustomNoteItem extends StatelessWidget {
             padding: EdgeInsets.only(top: 16),
             child: Text(
               "Build Your Career With Tharwat Samy",
-              style: TextStyle(color: Color(0xff9A7747), fontSize: 19),
+              style: TextStyle(color: Color(0xff9A7747), fontSize: 18),
             ),
           ),
           trailing: IconButton(
