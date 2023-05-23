@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:notesapp/constants.dart';
+
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key,required this.color,required this.text});
@@ -16,8 +16,8 @@ class CustomButton extends StatelessWidget {
       height: 50,
       child: Center(
         child: Text(
-          "$text",
-          style: TextStyle(
+          text,
+          style: const TextStyle(
               color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),

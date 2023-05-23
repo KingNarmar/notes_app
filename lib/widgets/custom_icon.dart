@@ -1,16 +1,16 @@
-
 import 'package:flutter/material.dart';
 
-class CustomSearchIcon extends StatelessWidget {
-  const CustomSearchIcon({
+class CustomIcon extends StatelessWidget {
+  const CustomIcon({
     super.key,
+    required this.icon,
   });
-
+  final Icon icon;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       child: Padding(
-        padding: const EdgeInsets.only(right: 8,top: 5),
+        padding: const EdgeInsets.only(right: 8, top: 5),
         child: Container(
           height: 25,
           width: 45,
@@ -18,7 +18,7 @@ class CustomSearchIcon extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             color: const Color(0xff3B3B3B),
           ),
-          child: const Icon(Icons.search,)
+          child: icon
         ),
       ),
     );
