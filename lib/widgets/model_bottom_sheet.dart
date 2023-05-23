@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notesapp/constants.dart';
 
 import 'add_notes_form.dart';
-import 'custom_button.dart';
-import 'custom_text_field.dart';
 
 class CustomBottomSheet extends StatelessWidget {
   const CustomBottomSheet({super.key});
@@ -18,4 +15,3 @@ class CustomBottomSheet extends StatelessWidget {
     );
   }
 }
-
