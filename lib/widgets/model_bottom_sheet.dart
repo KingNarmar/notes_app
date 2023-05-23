@@ -17,12 +17,23 @@ class CustomBottomSheet extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CustomTextField(hintText: "Title",),
-            SizedBox(height: 16,),
-            CustomTextField(hintText: "Content",maxLins: 5,),
-            SizedBox(height: 30,),
-            CustomButton(color: KPrimaryColor,text: "Add"),
-            SizedBox(height: 16,)
+            CustomTextField(
+              hintText: "Title",
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            CustomTextField(
+              hintText: "Content",
+              maxLins: 5,
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            CustomButton(color: kPrimaryColor, text: "Add"),
+            SizedBox(
+              height: 16,
+            )
           ],
         ),
       ),
