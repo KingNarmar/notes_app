@@ -3,6 +3,7 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:notesapp/constants.dart';
 import 'Pages/notes_view.dart';
 
+
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox(kNotesBox);
