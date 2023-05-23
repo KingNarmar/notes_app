@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../widgets/custom_list_view.dart';
-
 import '../widgets/custom_search_icon.dart';
 import '../widgets/model_bottom_sheet.dart';
 
