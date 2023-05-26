@@ -20,9 +20,11 @@ class CustomListView extends StatelessWidget {
           child: ListView.builder(
             itemCount: notes.length,
             itemBuilder: (context, index) {
-              return const Padding(
-                padding: EdgeInsets.symmetric(vertical: 4),
-                child: CustomNoteItem(),
+              return  Padding(
+                padding :const EdgeInsets.symmetric(vertical: 4),
+                child: CustomNoteItem(
+                  note: notes[index],
+                ),
               );
             },
           ),
