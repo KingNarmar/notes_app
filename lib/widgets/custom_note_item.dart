@@ -6,7 +6,8 @@ import '../Pages/edit_note_view.dart';
 
 class CustomNoteItem extends StatelessWidget {
   const CustomNoteItem({
-    super.key, required this.note,
+    super.key,
+    required this.note,
   });
   final NoteModel note;
   @override
@@ -23,23 +24,25 @@ class CustomNoteItem extends StatelessWidget {
         padding: const EdgeInsets.only(top: 24, bottom: 24, left: 16),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
-          color:  Color(note.color),
+          color: Color(note.color),
         ),
         child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
           ListTile(
-            title:  Text(
+            title: Text(
               note.title,
-              style:const TextStyle(color: Colors.black, fontSize: 26),
+              style: const TextStyle(color: Colors.black, fontSize: 26),
             ),
-            subtitle:  Padding(
-              padding:const EdgeInsets.only(top: 16),
+            subtitle: Padding(
+              padding: const EdgeInsets.only(top: 16),
               child: Text(
                 note.supTitle,
                 style: const TextStyle(color: Color(0xff9A7747), fontSize: 18),
               ),
             ),
             trailing: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                note.delete();
+              },
               icon: const Icon(
                 FontAwesomeIcons.trash,
                 color: Colors.black,
@@ -50,7 +53,7 @@ class CustomNoteItem extends StatelessWidget {
             padding: const EdgeInsets.only(right: 16, top: 16),
             child: Text(
               note.date,
-              style:const TextStyle(color: Color(0xff9A7747), fontSize: 16),
+              style: const TextStyle(color: Color(0xff9A7747), fontSize: 16),
             ),
           )
         ]),
