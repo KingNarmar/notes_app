@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notesapp/cubits/notes%20cubit/notes_cubit.dart';
-import '../widgets/custom_list_view.dart';
+
 import '../widgets/custom_icon.dart';
 import '../widgets/model_bottom_sheet.dart';
+import '../widgets/notes_view_body.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -26,16 +27,7 @@ class NotesView extends StatelessWidget {
             )
           ],
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            children: const [
-              Expanded(
-                child: CustomListView(),
-              )
-            ],
-          ),
-        ),
+        body: const NotesViewBody(),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
               showModalBottomSheet(
@@ -53,3 +45,4 @@ class NotesView extends StatelessWidget {
     );
   }
 }
+
