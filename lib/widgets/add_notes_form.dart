@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 
+
 import 'package:notesapp/models/note_model.dart';
 
 import '../constants.dart';
@@ -74,6 +75,7 @@ class _AddNotesFormState extends State<AddNotesForm> {
                     autovalidateMode = AutovalidateMode.always;
                     setState(() {});
                   }
+                 
                 },
               );
             },
