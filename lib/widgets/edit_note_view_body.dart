@@ -3,9 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notesapp/cubits/notes%20cubit/notes_cubit.dart';
 import 'package:notesapp/models/note_model.dart';
 
-import '../constants.dart';
-import '../cubits/add note cubit/add_note_cubit.dart';
-import 'color_list.dart';
+
 import 'custom_app_bar.dart';
 
 import 'custom_text_field.dart';

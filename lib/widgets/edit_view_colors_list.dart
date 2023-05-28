@@ -44,6 +44,6 @@ class _EditViewColorsState extends State<EditViewColors> {
             );
           }),
     );
-    ;
+    
   }
 }
