@@ -1,16 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notesapp/cubits/add%20note%20cubit/add_note_cubit.dart';
+
+import '../constants.dart';
 
 class ColorItem extends StatelessWidget {
   const ColorItem({
     super.key,
-    required this.isActive, required this.color,
+    required this.isActive,
+    required this.color,
   });
   final bool isActive;
-  final Color  color;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return isActive
-        ?  CircleAvatar(
+        ? CircleAvatar(
             backgroundColor: Colors.white,
             radius: 38,
             child: CircleAvatar(
@@ -18,7 +23,7 @@ class ColorItem extends StatelessWidget {
               radius: 33,
             ),
           )
-        :  CircleAvatar(
+        : CircleAvatar(
             backgroundColor: color,
             radius: 38,
           );
@@ -34,19 +39,13 @@ class ColorsListView extends StatefulWidget {
 
 class _ColorsListViewState extends State<ColorsListView> {
   int currentIndex = 0;
-  List<Color> colors = const [
-    
-    Color(0xffEAE0D5),
-    Color(0xffC6AC8F),
-    Color(0xff256EFF),
-    Color(0xff256EFF),
-  ];
+  
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 38 * 2,
       child: ListView.builder(
-          itemCount: colors.length,
+          itemCount: kColors.length,
           scrollDirection: Axis.horizontal,
           itemBuilder: (context, index) {
             return Padding(
@@ -54,10 +53,11 @@ class _ColorsListViewState extends State<ColorsListView> {
               child: GestureDetector(
                 onTap: () {
                   currentIndex = index;
+                  BlocProvider.of<AddNoteCubit>(context).color = kColors[index];
                   setState(() {});
                 },
                 child: ColorItem(
-                  color: colors[index],
+                  color: kColors[index],
                   isActive: currentIndex == index,
                 ),
               ),
